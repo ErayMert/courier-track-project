@@ -58,11 +58,11 @@ public class StoreProximityService {
             return;
         }
 
-        saveStoreEntryLog(courier.getId(), store.getId(), order.getId());
         orderClient.updateOrderStatusAndCourierStatus(order.getId(), OrderStatus.IN_TRANSIT,
                 courier.getId(), CourierStatus.ON_DELIVERY);
         log.info("Processed order {} for store {} by courier {}",
                 order.getId(), store.getId(), courier.getFirstName());
+        saveStoreEntryLog(courier.getId(), store.getId(), order.getId());
     }
 
     private void saveStoreEntryLog(Long courierId, Long storeId, Long orderId) {
