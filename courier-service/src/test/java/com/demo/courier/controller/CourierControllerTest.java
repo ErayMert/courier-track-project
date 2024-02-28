@@ -76,7 +76,7 @@ class CourierControllerTest {
 
         Long courierId = 1L;
 
-        mockMvc.perform(post("/couriers/id/location", courierId)
+        mockMvc.perform(post("/couriers/{id}/location", courierId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk());
@@ -120,7 +120,8 @@ class CourierControllerTest {
         request.setLatitude(10.01);
         request.setLongitude(20.02);
 
-        mockMvc.perform(patch("/couriers/{id}/status/{orderId}/status", courierId, orderId)
+        mockMvc.perform(patch("/couriers/{id}/status/{orderId}/order-status", courierId, orderId)
+                        .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk());
 

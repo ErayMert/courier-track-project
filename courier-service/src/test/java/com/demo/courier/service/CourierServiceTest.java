@@ -147,7 +147,6 @@ class CourierServiceTest {
 
     @Test
     void updateStatusAfterDelivery_WhenCourierIsAtLocation() {
-        // Setup
         Long courierId = 1L;
         Long orderId = 1L;
         CourierLocationRequest request = CourierLocationRequest.builder()
