@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: courier-location-service
+    name: order-service
   datasource:
     url: jdbc:postgresql://localhost:5432/orders
     username: my_user

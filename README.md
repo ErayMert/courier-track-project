@@ -109,4 +109,8 @@ __/couriers/{id}/status/{orderId}/order-status__
 
 ![grafana](images/grafana.png)
 
+* For example, let's observe the steps it follows when I trigger the courier location service by querying with a traceId
+
+![trace_id](images/trace_id.png)
+
 >  [My Repository for Log Tracing](https://github.com/ErayMert/microservice-log-tracing)
