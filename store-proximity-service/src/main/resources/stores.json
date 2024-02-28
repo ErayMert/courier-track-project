@@ -1,0 +1,32 @@
+[
+  {
+    "id" : 1,
+    "name": "Ataşehir MMM Migros",
+    "latitude": 40.9923307,
+    "longitude": 29.1244229
+  },
+  {
+    "id" : 2,
+    "name": "Novada MMM Migros",
+    "latitude": 40.986106,
+    "longitude": 29.1161293
+  },
+  {
+    "id" : 3,
+    "name": "Beylikdüzü 5M Migros",
+    "latitude": 41.0066851,
+    "longitude": 28.6552262
+  },
+  {
+    "id" : 4,
+    "name": "Ortaköy MMM Migros",
+    "latitude": 41.055783,
+    "longitude": 29.0210292
+  },
+  {
+    "id" : 5,
+    "name": "Caddebostan MMM Migros",
+    "latitude": 40.9632463,
+    "longitude": 29.0630908
+  }
+]

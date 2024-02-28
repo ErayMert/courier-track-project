@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: courier-service
+  kafka:
+    consumer:
+      max-poll-records: 1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/courier
+    username: my_user
+    password: my_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+kafka:
+  groupId : courierLocation
+  topic:
+    courierLocation: courier-location
+  address: localhost:9092
+
+feign:
+  client:
+    config:
+      order-service:
+        name: order-service
+        url: http://localhost:8083
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: "http://localhost:9411/api/v2/spans" # default
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:}, %X{traceId:-}, %X{spanId:-}]"
